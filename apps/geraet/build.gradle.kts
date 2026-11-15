@@ -52,4 +52,5 @@ dependencies {
     implementation(libs.lifecycle.rt.compose)
     debugImplementation(libs.compose.tooling)
     testImplementation(libs.junit4)                  // Kapitel 19
+    testImplementation(libs.openhab.testsuite)
 }

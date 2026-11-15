@@ -65,7 +65,7 @@ class Waechter : Service() {
         OpenHABSmartHome(v).wechsel().collect { w ->
             val regel = regeln[w.item]
             if (regel != null && (regel.wenn == null || regel.wenn == w.neu)) {
-                melden(regel.label, "${regel.label}: ${w.neu}")
+                melden(regel.label, "ist jetzt ${w.neu}")
             }
             if (w.item == WIDGET_ITEM) LichtWidget().updateAll(this)   // Widget live halten
         }

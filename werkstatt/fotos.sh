@@ -135,8 +135,16 @@ for i in 1 2 3 4 5 6; do
 done
 sleep 2
 $UI dump widget-app
-$UI longdrag "Deckenlicht" $((W/2)) $((H/3)) || $UI longdrag "Zuhause" $((W/2)) $((H/3))
-sleep 4
+# neuere Launcher: Vorschau antippen, dann "Hinzufügen"; sonst lange drücken und ziehen
+$UI tap "Widget „Deckenlicht“"
+sleep 2
+$UI dump widget-angetippt
+if $UI tap "Hinzufügen" || $UI tap "Zum Startbildschirm hinzufügen" || $UI tap "Add"; then
+  sleep 3
+else
+  $UI longdrag "Widget „Deckenlicht“" $((W/2)) $((H/3))
+  sleep 4
+fi
 $UI dump widget-abgelegt
 adb shell input keyevent KEYCODE_HOME
 sleep 3
