@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 9+ verbietet unverschlüsseltes HTTP. Für ein openHAB im Heimnetz
+     (http://192.168.x.y:8080) erlauben wir es hier ausdrücklich. Wer openHAB über
+     HTTPS oder myopenHAB erreicht, braucht diese Datei nicht. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

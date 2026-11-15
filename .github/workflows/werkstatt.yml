@@ -1,0 +1,120 @@
+# Werkstatt: alles bauen, gegen ein frisches openHAB 5 testen, die Apps im Emulator
+# bedienen und Bildschirmfotos machen. Die Ergebnisse landen im Branch "ergebnisse".
+name: Werkstatt
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: werkstatt
+  cancel-in-progress: true
+
+jobs:
+  alles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+
+      - name: Gradle-Wrapper ergänzen (Binärdatei fehlt im Werkstatt-Repo)
+        run: |
+          mkdir -p /tmp/w && cd /tmp/w && touch settings.gradle
+          gradle -q wrapper --gradle-version 8.11.1
+          for d in "$GITHUB_WORKSPACE/gradle/wrapper" "$GITHUB_WORKSPACE/apps/gradle/wrapper"; do
+            cp gradle/wrapper/gradle-wrapper.jar "$d/"
+          done
+          chmod +x "$GITHUB_WORKSPACE/gradlew" "$GITHUB_WORKSPACE/apps/gradlew"
+
+      - name: KVM freischalten
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: openHAB starten
+        run: bash werkstatt/openhab-start.sh
+
+      - name: Zugang für die Apps
+        run: |
+          printf 'sdk.dir=%s\nopenhab.url=http://10.0.2.2:8080\nopenhab.token=%s\n' \
+            "$ANDROID_HOME" "$OPENHAB_TOKEN" > apps/local.properties
+
+      - name: Speedrun (Beispiele, Tests, Apps bauen)
+        id: speedrun
+        continue-on-error: true
+        run: |
+          mkdir -p ergebnisse
+          java -Dspeedrun.log=ergebnisse/speedrun werkstatt/speedrun/Speedrun.java 2>&1 | tee ergebnisse/speedrun.txt
+          exit ${PIPESTATUS[0]}
+
+      - name: Testberichte sichern
+        if: always()
+        run: |
+          mkdir -p ergebnisse/tests
+          find . -path ./ergebnisse -prune -o -path '*/build/test-results/*' -name '*.xml' -print \
+            | while read f; do cp "$f" "ergebnisse/tests/$(echo "$f" | tr '/' '_' | sed 's/^\._//')"; done
+          ls apps/*/build/outputs/apk/debug/ 2>/dev/null > ergebnisse/apks.txt || true
+
+      - name: Telefon-Emulator (Fotos)
+        id: telefon
+        if: always() && hashFiles('apps/ohapp/build/outputs/apk/debug/ohapp-debug.apk') != ''
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_7
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot
+          script: bash werkstatt/fotos.sh
+
+      - name: Wear-OS-Emulator (Foto)
+        id: wear
+        if: always() && hashFiles('apps/wear/build/outputs/apk/debug/wear-debug.apk') != ''
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          target: android-wear
+          arch: x86_64
+          profile: wearos_large_round
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-snapshot
+          script: bash werkstatt/wear.sh
+
+      - name: Ergebnisse veröffentlichen
+        if: always()
+        run: |
+          mkdir -p ergebnisse
+          cp ~/openhab/userdata/logs/openhab.log ergebnisse/ 2>/dev/null || true
+          cp ~/openhab/openhab.out ergebnisse/ 2>/dev/null || true
+          {
+            echo "commit: $GITHUB_SHA"
+            echo "lauf: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            echo "speedrun: ${{ steps.speedrun.outcome }}"
+            echo "telefon: ${{ steps.telefon.outcome }}"
+            echo "wear: ${{ steps.wear.outcome }}"
+            date -u
+          } > ergebnisse/LAUF.txt
+          cd ergebnisse
+          git init -q
+          git checkout -q -b ergebnisse
+          git add -A
+          git -c user.name=werkstatt -c user.email=werkstatt@users.noreply.github.com \
+            commit -qm "Ergebnisse für $GITHUB_SHA"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ergebnisse

@@ -1,0 +1,35 @@
+# Kapitel 19: Bei jedem Push alles übersetzen und die Tests ausführen
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  beispiele:                       # Kotlin-Programme und Integrationstests (Kapitel 8–19)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Übersetzen und testen
+        run: ./gradlew bereit test
+        env:                       # optional: Secrets für ein erreichbares Test-openHAB
+          OPENHAB_URL: ${{ secrets.OPENHAB_URL }}
+          OPENHAB_TOKEN: ${{ secrets.OPENHAB_TOKEN }}
+
+  apps:                            # Android-Apps bauen, Unit-Tests ausführen
+    runs-on: ubuntu-latest         # das Android SDK ist auf den Runnern installiert
+    defaults:
+      run:
+        working-directory: apps
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - uses: gradle/actions/setup-gradle@v3
+      - name: Apps bauen und Unit-Tests ausführen
+        run: ./gradlew assembleDebug testDebugUnitTest
