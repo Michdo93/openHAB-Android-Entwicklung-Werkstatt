@@ -4,6 +4,8 @@ package de.openhabbuch.wear
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -11,6 +13,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
 import androidx.wear.compose.foundation.lazy.items
@@ -56,11 +59,12 @@ fun Lichter(openHAB: OpenHAB) {
         }
     }
 
-    ScalingLazyColumn {
+    ScalingLazyColumn(Modifier.fillMaxSize()) {
         item { ListHeader { Text("Lichter", textAlign = TextAlign.Center) } }
         items(lichter.entries.toList()) { (name, licht) ->
             val an = licht.second == "ON" || (licht.second.toIntOrNull() ?: 0) > 0
             ToggleChip(
+                modifier = Modifier.fillMaxWidth(),
                 checked = an,
                 onCheckedChange = { neu ->
                     val befehl = if (neu) "ON" else "OFF"
