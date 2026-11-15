@@ -21,9 +21,18 @@ for versuch in 1 2 3 4; do
   adb shell input keyevent KEYCODE_WAKEUP
   adb shell am start -W -n de.openhabbuch.wear/.MainActivity
   if $UI wait "Deckenlicht" 30; then
-    adb exec-out screencap -p > "$OUT/wear.png"
+    # ein ruhiges Bild abwarten: zwei gleiche Aufnahmen hintereinander, App noch vorn
+    adb exec-out screencap -p > /tmp/w0.png
+    for k in 1 2 3 4 5 6 7 8 9 10; do
+      sleep 0.6
+      adb exec-out screencap -p > /tmp/w1.png
+      if cmp -s /tmp/w0.png /tmp/w1.png && $UI wait "Deckenlicht" 1 > /dev/null; then
+        cp /tmp/w1.png "$OUT/wear.png"; echo "ruhiges Bild nach $k Aufnahmen"; break
+      fi
+      mv /tmp/w1.png /tmp/w0.png
+    done
     $UI dump wear
-    grep -q "Deckenlicht" ergebnisse/ui/wear.xml && break
+    [ -f "$OUT/wear.png" ] && break
   fi
   $UI dump wear-versuch-$versuch
 done

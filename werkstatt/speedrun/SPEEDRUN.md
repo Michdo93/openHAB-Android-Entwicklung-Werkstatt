@@ -50,9 +50,10 @@ Vier Beispiele zeigen **absichtlich** Fehler und gelten trotzdem als OK:
 > löschen sie wieder. Nur gegen eine Übungsinstanz mit `openhab-conf/` ausführen, nie gegen das
 > eigene Zuhause.
 
-Zuletzt durchgelaufen (Kotlin-Beispiele, ohne Gradle und Apps) mit openHAB 5.2.3, JDK 21,
-android-openhab-rest-client 2.0.0 und android-openhab-test-suite 2.0.0: 55 × OK, 0 × WARNUNG,
-0 × FEHLER. Die Integrationstests aus Kapitel 19 laufen mit 3 von 3 Tests grün.
+Zuletzt komplett durchgelaufen (GitHub Actions, Ubuntu, frisches openHAB 5.2.3, JDK 21,
+Android SDK 35, android-openhab-rest-client 2.0.0 und android-openhab-test-suite 2.0.0):
+59 × OK, 0 × WARNUNG, 0 × FEHLER, einschließlich `gradle_bereit`, `gradle_test`, `assembleDebug`
+und `testDebugUnitTest`. Unit- und Integrationstests: 9 von 9 grün.
 
 ## Beispiele einzeln ausführen
 
@@ -72,7 +73,7 @@ Alle Programme werden aus dem Hauptordner des Repositorys gestartet:
 ## Die Apps prüfen (Emulator oder Smartphone)
 
 Der Speedrun baut die Apps und führt die Unit-Tests aus; die Bedienung prüft man von Hand. Die
-Bildschirmfotos für das Buch entstehen dabei gleich mit (Emulator: Pixel 8, Android 15,
+Bildschirmfotos für das Buch entstehen dabei gleich mit (Emulator: Pixel 7, Android 15, Sprache Deutsch,
 helles Design; Kamera-Symbol in der Emulator-Leiste oder `adb exec-out screencap -p > bild.png`).
 
 | App | Prüfen | Bild fürs Buch |
