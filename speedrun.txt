@@ -1,0 +1,67 @@
+openHAB 5.2.3 unter http://127.0.0.1:8080
+
+kapitel08/gradle_bereit                OK         13.0 s
+kapitel08/B01_WerteUndTypen            OK          0.1 s
+kapitel08/B02_Kontrollfluss            OK          0.1 s
+kapitel08/B03_Funktionen               OK          0.1 s
+kapitel08/B04_Klassen                  OK          0.1 s
+kapitel08/B05_FehlerUndJson            OK          0.1 s
+kapitel08/B06_Collections              OK          0.1 s
+kapitel08/B07_GenerikaUndSealed        OK          0.1 s
+kapitel09/B01_Coroutines               OK          1.4 s
+kapitel09/B02_Abbrechen                OK          1.5 s
+kapitel09/B03_Flows                    OK          1.3 s
+kapitel09/B04_Dateien                  OK          0.1 s
+kapitel09/B05_HttpRoh                  OK          0.2 s
+kapitel09/B06_ProzessUndSignale        OK          3.1 s
+kapitel10/B01_Verbinden                OK          0.2 s
+kapitel10/B02_ItemsLesen               OK          0.2 s
+kapitel10/B03_CommandSenden            OK          0.7 s
+kapitel10/B04_StateMelden              OK          0.2 s
+kapitel10/B05_FehlerBehandeln          OK          0.2 s
+kapitel10/B06_Parallel                 OK          0.2 s
+kapitel10/B07_OptionaleParameter       OK          0.1 s
+kapitel11/B01_ItemsCrud                OK          0.1 s
+kapitel11/B02_VieleItems               OK          0.2 s
+kapitel11/B03_Metadaten                OK         11.5 s
+kapitel11/B04_Semantik                 OK          0.2 s
+kapitel11/B05_GruppenUndVerlauf        OK          0.5 s
+kapitel12/B01_Addons                   OK          0.2 s
+kapitel12/B02_Bauplaene                OK          0.2 s
+kapitel12/B03_DiscoveryInbox           OK          5.3 s
+kapitel12/B04_ThingsVerwalten          OK          5.2 s
+kapitel12/B05_Links                    OK          2.2 s
+kapitel12/B06_Actions                  OK          0.2 s
+kapitel13/B01_RegelnLesen              OK          0.2 s
+kapitel13/B02_RegelAnlegen             OK          2.2 s
+kapitel13/B03_RegelSteuern             OK          3.2 s
+kapitel13/B04_ZeitplanUndSkript        OK          2.3 s
+kapitel13/B05_Modultypen               OK          0.2 s
+kapitel14/B01_Persistenzdienste        OK          0.1 s
+kapitel14/B02_Testdaten                OK          0.8 s
+kapitel14/B03_Verlauf                  OK          0.2 s
+kapitel14/B04_DatenLoeschen            OK          0.1 s
+kapitel14/B05_Transformationen         OK          1.9 s
+kapitel14/B02_Testdaten_erneut         OK          0.8 s
+kapitel14/B06_CsvExport                OK          0.2 s
+kapitel15/B01_SitemapLesen             OK          0.2 s
+kapitel15/B02_SitemapAnlegen           OK          0.1 s
+kapitel15/B03_SitemapEreignisse        OK          1.2 s
+kapitel15/B04_Sprache                  OK          0.7 s
+kapitel15/B05_System                   OK          0.6 s
+kapitel16/B01_SseRoh                   OK         15.1 s
+kapitel16/B02_Ereigniskette            OK          3.1 s
+kapitel16/B03_Ereignisarten            OK          6.2 s
+kapitel16/B04_StateTracker             OK          4.2 s
+kapitel16/B05_RobusterListener         OK         10.1 s
+kapitel16/B06_EreignisseVerteilen      OK          4.2 s
+kapitel19/gradle_test                  OK         15.3 s
+kapitel20/B01_MeldungenEinrichten      OK          0.1 s
+apps/assembleDebug                     OK         36.9 s
+apps/testDebugUnitTest                 OK          6.5 s
+
+OK        59
+WARNUNG    0
+FEHLER     0
+
+Ausgaben: /home/runner/work/openHAB-Android-Entwicklung-Werkstatt/openHAB-Android-Entwicklung-Werkstatt/ergebnisse/speedrun

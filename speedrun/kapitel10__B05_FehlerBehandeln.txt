@@ -1,0 +1,10 @@
+Wohnzimer_Licht <- ON: FEHLER  Item not found.
+Wohnzimmer_Licht <- HALB: FEHLER  Invalid command for this item.
+Flur_Haustuer <- OPEN: FEHLER  Invalid command for this item.
+Wohnzimmer_Licht <- OFF: OK
+
+löschen: {error=Item not found or item is not editable.}
+Verbindung: false – HTTP error occurred: 401 Client Error: Unauthorized for url: http://127.0.0.1:8080/rest/
+falsches Token: HTTP error 401: 401 Client Error: Unauthorized for url: http://127.0.0.1:8080/rest/items/Wohnzimmer_Licht/state (Invalid credentials)
+anderer Server: {error=Request error: Connection refused: Connection refused (connect failed) (http://127.0.0.1:9/rest/items/Wohnzimmer_Licht/state)}
+Ausnahme: Item not found.

@@ -1,0 +1,15 @@
+OK: 55.0
+  (geprüft: 55)
+Fehler: außerhalb 0–100: 120.0
+  (geprüft: 120)
+Fehler: keine Zahl: viel
+  (geprüft: viel)
+Wohnzimmer / ?
+Erfolg: false, Wert: -1.0
+gelesen: Zeile 1
+Werkstatt_Temperatur hat 2 Tags
+{"name":"Werkstatt_Temperatur","state":"19 °C","tags":["Measurement","Temperature"]}
+{
+  "ok": true
+}
+JSON-Fehler: Invalid JSON at position 1: expected key

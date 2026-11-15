@@ -1,0 +1,12 @@
+ItemAddedEvent                     Sonne_Azimut
+ItemStateChangedEvent              290.7567299522178 °
+ItemChannelLinkAddedEvent          Sonne_Azimut <-> position#azimuth
+ItemStateChangedEvent              290.75674978512205 °
+ThingStatusInfoChangedEvent        ONLINE -> UNINITIALIZED (NONE)
+ThingStatusInfoChangedEvent        UNINITIALIZED -> UNINITIALIZED (DISABLED)
+ThingStatusInfoChangedEvent        UNINITIALIZED -> INITIALIZING (NONE)
+ThingStatusInfoChangedEvent        INITIALIZING -> ONLINE (NONE)
+ItemStateChangedEvent              290.7647966001673 °
+ItemStateChangedEvent              290.76480443810505 °
+ItemChannelLinkRemovedEvent        Sonne_Azimut <-> position#azimuth
+ItemRemovedEvent                   Sonne_Azimut

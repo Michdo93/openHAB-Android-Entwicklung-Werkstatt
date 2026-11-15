@@ -1,0 +1,13 @@
+Int 70, Double 21.5, Boolean false
+Wohnzimmer_Licht = ON (16 Zeichen)
+[Küche] KÜCHE beginnt mit K: true
+Werkstatt   18.3 °C
+{"name": "Wohnzimmer_Licht", "state": "ON"}
+Länge: null
+Anzeige: (ohne Beschriftung)
+Zahl + 1 = 56
+== true, === false
+Liste [Wohnzimmer, Küche, Werkstatt], Dimmer dabei: true
+Map {name=Wohnzimmer_Dimmer, state=55, tags=[Light]}, state = 55
+getOrDefault: (ohne Beschriftung)
+22.5 / 56 / 551

@@ -1,0 +1,5 @@
+Abonnement 3d588b94… für Seite »Tablet im Flur«
+  Widget 1_02  Alle Lichter [1 an]      Zustand ON
+  Widget 1_01  Leselampe [35 %]         Zustand 35
+  Widget 1_10  Haustür [OPEN]           Zustand OPEN
+Sitemap löschen: {message=OK}

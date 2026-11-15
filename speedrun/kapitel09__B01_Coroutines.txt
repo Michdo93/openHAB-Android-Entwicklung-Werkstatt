@@ -1,0 +1,8 @@
+main läuft weiter
+  Hintergrund 0
+  Hintergrund 1
+  Hintergrund 2
+Werkstatt 20.0, Wohnzimmer 20.1
+beide zusammen in etwa 500 ms statt 1000 ms
+alle: {Bad=18.3, Flur=18.4, Küche=18.5}
+10000 Coroutines fertig

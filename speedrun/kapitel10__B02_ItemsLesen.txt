@@ -1,0 +1,23 @@
+16 Items gefunden:
+  Flur_Haustuer                Contact                CLOSED
+  Haus_Status                  String                 Alle zu Hause
+  Kueche_Rollladen             Rollershutter          0
+  Werkstatt_Feuchte            Number:Dimensionless   NULL
+  Werkstatt_LetzteMeldung      DateTime               NULL
+  Werkstatt_Luefter            Switch                 OFF
+  Werkstatt_Temperatur         Number:Temperature     NULL
+  Wohnzimmer_Dimmer            Dimmer                 NULL
+  Wohnzimmer_Farblicht         Color                  NULL
+  Wohnzimmer_Licht             Switch                 ON
+  Wohnzimmer_Temperatur        Number:Temperature     21.5 °C
+  gHaus                        Group                  NULL
+  gKueche                      Group                  NULL
+  gLichter                     Group                  ON
+  gWerkstatt                   Group                  NULL
+  gWohnzimmer                  Group                  NULL
+
+Label: Deckenlicht | Gruppen: [gWohnzimmer, gLichter]
+Tags: [Light, Switch]
+Temperatur: 21.5 °C
+Dimmer: Wohnzimmer_Dimmer
+Mit Tag 'Light': Wohnzimmer_Dimmer, Wohnzimmer_Farblicht, Wohnzimmer_Licht

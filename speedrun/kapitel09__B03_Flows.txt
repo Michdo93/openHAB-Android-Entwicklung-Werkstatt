@@ -1,0 +1,12 @@
+warm: 21.0 °C
+warm: 22.5 °C
+erste zwei: [19.5, 21.0]
+Anzeige:  0.0 °C
+Anzeige:  19.5 °C
+Anzeige:  21.0 °C
+Warnung:  Werkstatt_Temperatur zu warm: 21.0 °C
+Warnung:  Werkstatt_Temperatur zu warm: 21.0 °C
+Anzeige:  22.0 °C
+Warnung:  Werkstatt_Temperatur zu warm: 22.0 °C
+Anzeige:  23.0 °C
+aktueller Wert: 23.0, erster über 22: 22.5

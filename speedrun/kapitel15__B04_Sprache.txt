@@ -1,0 +1,10 @@
+Interpreter rulehli  Rule-based Interpreter     Sprachen []
+Interpreter system   Built-in Interpreter       Sprachen [en, de, fr, es]
+Audio-Ausgänge: enhancedjavasound, webaudio
+Standard-Interpreter: system
+  »Schalte das Deckenlicht ein« -> Ok.
+  »Schalte das Deckenlicht ein« -> Das Objekt ist bereits an.
+  »Schalte die Leselampe aus« -> Ok.
+  »Mach mir einen Kaffee« -> Entschuldigung, aber das habe ich nicht verstanden.
+Deckenlicht: ON | Leselampe: 0
+Ok.

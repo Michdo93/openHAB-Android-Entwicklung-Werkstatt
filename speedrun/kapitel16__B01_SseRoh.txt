@@ -1,0 +1,16 @@
+Warte auf Ereignisse …
+roh: event: alive
+roh: data: {"type":"ALIVE","interval":10}
+roh: 
+roh: event: message
+roh: data: {"topic":"openhab/items/Wohnzimmer_Dimmer/statechanged","payload
+  -> Wohnzimmer_Dimmer: 0 -> 71
+roh: 
+roh: event: message
+roh: data: {"topic":"openhab/items/gLichter/Wohnzimmer_Dimmer/statechanged"
+  -> gLichter: OFF -> ON
+roh: 
+roh: event: alive
+roh: data: {"type":"ALIVE","interval":10}
+roh: 
+beendet, Strom offen: false

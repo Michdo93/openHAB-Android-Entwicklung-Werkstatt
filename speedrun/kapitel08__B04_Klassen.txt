@@ -1,0 +1,10 @@
+Gerät Werkstatt_Temperatur
+Schalter Wohnzimmer_Licht (AN)
+Messwert(item=Werkstatt_Temperatur, wert=18.1, einheit=°C)
+Werkstatt_Temperatur: 18.2 °C, Wert 18.2
+gleich? true
+Kopie: Messwert(item=Werkstatt_Temperatur, wert=20.0, einheit=°C)
+zerlegt: Werkstatt_Temperatur / 18.1
+Zustand AN, alle: [AN, AUS, UNBEKANNT]
+http://127.0.0.1:8080, Zugriffe 1
+abgelehnt: item fehlt

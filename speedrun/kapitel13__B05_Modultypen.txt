@@ -1,0 +1,30 @@
+Trigger (13):
+  core.ChannelEventTrigger       ein Auslösekanal löst aus
+  core.GroupCommandTrigger       Ein Mitglied einer Gruppe erhält einen Befehl
+  core.GroupStateChangeTrigger   der Zustand eines Mitglieds einer Item-Gruppe ändert sich
+  core.GroupStateUpdateTrigger   der Zustand eines Mitglieds einer Gruppe wird aktualisiert
+  core.ItemCommandTrigger        ein Item erhält einen Befehl
+  core.ItemStateChangeTrigger    ein Item-Zustand ändert sich
+  core.ItemStateUpdateTrigger    ein Item-Zustand wird aktualisiert
+Bedingung (11):
+  core.ItemStateCondition        ein Item hat einen bestimmten Zustand
+  core.ThingStatusCondition      eine Thing hat einen bestimmten Status
+  core.TimeOfDayCondition        es ist eine bestimmte Tageszeit
+  ephemeris.DaysetCondition      es ist ein Tag aus einer konfigurierten Liste von Tagen
+  ephemeris.HolidayCondition     es ist ein Feiertag
+  ephemeris.NotHolidayCondition  es ist kein Feiertag
+  ephemeris.WeekdayCondition     es ist ein Wochentag
+Aktion (7):
+  core.ItemCommandAction         einen Befehl senden
+  core.ItemStateUpdateAction     einen Item-Zustand aktualisieren
+  core.RuleEnablementAction      Szenen, Skripte & Regeln aktivieren oder deaktivieren
+  core.RunRuleAction             Szenen, Skripte & Regeln ausführen
+  media.PlayAction               play a sound
+  media.SayAction                say something
+  script.ScriptAction            Execute an inline script
+
+core.ItemCommandAction – Sendet einen Befehl an ein bestimmtes Item.
+  itemName   TEXT   Pflicht  Item
+  command    TEXT   optional Command
+
+Regelvorlagen installiert: 0

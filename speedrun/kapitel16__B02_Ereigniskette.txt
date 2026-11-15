@@ -1,0 +1,6 @@
+>>> sende Command ON
+
+ItemCommandEvent         command       ON
+ItemStateEvent           state         ON
+ItemStateUpdatedEvent    stateupdated  ON
+ItemStateChangedEvent    statechanged  ON

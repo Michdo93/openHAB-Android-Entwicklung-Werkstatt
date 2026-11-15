@@ -1,0 +1,9 @@
+passende Profile: [system:default, system:follow, system:offset, transform:DSL]
+Link 1: {message=OK}
+Link 2: {message=OK}
+Sonne_Phase = NIGHT
+Sonne_Hoehe = 48.436855153073076 ° (Höhe + 90°)
+gespeichert: Sonne_Hoehe -> astro:sun:zuhause:position#elevation {offset=90 °, profile=system:offset}
+lösen: {message=OK}
+alle Links des Items löschen: {count=1}
+verwaiste Links: []

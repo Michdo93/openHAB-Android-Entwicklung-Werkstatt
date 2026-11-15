@@ -1,0 +1,7 @@
+Switch-Items:  2
+Licht, Reihe:  [{name=Wohnzimmer_Dimmer}, {name=Wohnzimmer_Licht}, {name=Wohnzimmer_Farblicht}]
+Licht, Namen:  [{name=Wohnzimmer_Dimmer}, {name=Wohnzimmer_Licht}, {name=Wohnzimmer_Farblicht}]
+Muster:        %.1f °C
+erstes Tag:    Temperature
+Einheit:       °C
+fehlt:         null

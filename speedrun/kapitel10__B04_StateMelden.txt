@@ -1,0 +1,9 @@
+{message=Accepted.}
+{message=Accepted.}
+{message=Accepted.}
+{message=Accepted.}
+{message=Accepted.}
+Werkstatt_Temperatur   = 18.4 °C
+Werkstatt_Feuchte      = 56 %
+Flur_Haustuer          = OPEN
+Wohnzimmer_Temperatur  = 22.00000000000000000000000000000002 °C

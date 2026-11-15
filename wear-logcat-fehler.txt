@@ -1,0 +1,2 @@
+E/WearServices(  783): [ProviderGetter]Fetched empty list of supported providers: supportedTypes = null, packageName = de.openhabbuch.wear, watchFaceId = null
+E/WearServices(  783): [ProviderGetter]Fetched empty list of supported providers: supportedTypes = null, packageName = de.openhabbuch.wear, watchFaceId = null

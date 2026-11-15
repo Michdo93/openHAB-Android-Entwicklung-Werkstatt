@@ -1,0 +1,6 @@
+angelegt:  Garten_Pumpe Switch NULL
+gelesen:   ON
+geändert:  Gartenpumpe Zisterne [gHaus, gWerkstatt] Zustand: NULL
+verwaltet: per REST änderbar
+löschen:   {message=OK}
+danach:    {error=Item not found.}

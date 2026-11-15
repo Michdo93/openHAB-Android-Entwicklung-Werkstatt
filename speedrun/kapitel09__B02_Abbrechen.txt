@@ -1,0 +1,10 @@
+  beobachte (1)
+  beobachte (2)
+  beobachte (3)
+  abgebrochen
+  aufgeräumt
+schnell: rechtzeitig, langsam: null
+Zeitüberschreitung: TimeoutCancellationException
+gelesen auf DefaultDispatcher-worker-1
+rechnen auf DefaultDispatcher-worker-1
+zurück auf main

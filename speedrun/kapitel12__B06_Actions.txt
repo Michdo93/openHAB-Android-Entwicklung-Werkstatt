@@ -1,0 +1,18 @@
+  astro.getAzimuth           (date) – Get the azimuth for a given time.
+  astro.getElevation         (date) – Get the elevation for a given time.
+  astro.getEventTime         (phaseName, date, moment) – Get the date time of a sun event.
+  astro.getTotalRadiation    (date) – Get the total sun radiation for a given time.
+
+Sonnenhöhe über den Tag (jetzt und die nächsten Stunden):
+  15.11., 19:00   -31.9°
+  15.11., 22:00   -57.2°
+  16.11., 01:00   -53.0°
+  16.11., 04:00   -25.4°
+  16.11., 07:00     3.1°
+  16.11., 10:00    21.4°
+  16.11., 13:00    18.8°
+  16.11., 16:00    -2.7°
+  21.03., 12:00    41.7°
+  21.06., 12:00    64.5°
+  21.09., 12:00    41.8°
+  21.12., 12:00    18.0°

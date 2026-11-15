@@ -1,0 +1,9 @@
+Wohnzimmer_Licht         OFF              OFF
+Wohnzimmer_Dimmer        60               60
+Wohnzimmer_Temperatur    21.5 °C          21.5 °C
+Kueche_Rollladen         100              100
+Flur_Haustuer            OPEN             OPEN
+Werkstatt_Temperatur     18.4 °C          18.4 °C
+Haus_Status              Alle zu Hause    Alle zu Hause
+nacheinander: 20 ms
+gleichzeitig: 13 ms

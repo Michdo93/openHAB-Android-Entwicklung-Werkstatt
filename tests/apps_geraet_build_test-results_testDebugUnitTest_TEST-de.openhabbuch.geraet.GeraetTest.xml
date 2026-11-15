@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.openhabbuch.geraet.GeraetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-15T20:01:43" hostname="runnervmccnms" time="2.153">
+  <properties/>
+  <testcase name="meldetMesswerteUndFuehrtCommandsAus" classname="de.openhabbuch.geraet.GeraetTest" time="2.153"/>
+  <system-out><![CDATA[Items eingerichtet: 8
+gemeldet: Akku 42 %, lädt true, 300.0 lx, -61 dBm
+Command LAMPE_AN -> Taschenlampe an
+Success: 'Handy_Aktion' reached state 'LAMPE_AN'.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

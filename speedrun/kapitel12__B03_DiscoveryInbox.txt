@@ -1,0 +1,9 @@
+Standort: 48.0950,8.6630
+Bindings mit Gerätesuche: [astro]
+Suche läuft, Dauer in s: 2
+  IGNORED  astro:sun:local    Local Sun  {geolocation=48.0950,8.6630, useMeteorologicalSeason=false}
+  NEW      astro:moon:local   Local Moon  {geolocation=48.0950,8.6630}
+
+übernehmen: {message=OK}
+Mond über Aldingen ONLINE 34 Channels
+löschen: REMOVING

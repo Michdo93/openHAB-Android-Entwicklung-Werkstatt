@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Roboter-Szenario" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-15T20:00:51" hostname="runnervmccnms" time="10.691">
+  <properties/>
+  <testcase name="Thing, Regeln, Sitemap und Persistenz bereit" classname="kapitel19_tests.RoboterSzenarioTest" time="0.58"/>
+  <testcase name="Commands bewirken den erwarteten Zustand" classname="kapitel19_tests.RoboterSzenarioTest" time="10.087"/>
+  <testcase name="alle Items vorhanden und vom richtigen Typ" classname="kapitel19_tests.RoboterSzenarioTest" time="0.023"/>
+  <system-out><![CDATA[Rule status: IDLE
+Rule status: IDLE, Detail: NONE
+Success: 'Wohnzimmer_Dimmer' reached state '30'.
+]]></system-out>
+  <system-err><![CDATA[Test failed: 'HALB' is not a valid Switch value. Use ON or OFF.
+]]></system-err>
+</testsuite>

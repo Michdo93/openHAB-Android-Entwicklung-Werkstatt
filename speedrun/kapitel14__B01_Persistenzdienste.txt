@@ -1,0 +1,9 @@
+rrd4j     Queryable  RRD4j
+inmemory  Modifiable In Memory
+  Wohnzimmer_Farblicht        1 Werte, ältester 2026-11-15T19:59:22.587+0000
+  Garten_Pumpe                1 Werte, ältester 2026-11-15T19:59:23.923+0000
+  Kueche_Rollladen            4 Werte, ältester 2026-11-15T19:58:57.916+0000
+  Sonne_Hoehe                 2 Werte, ältester 2026-11-15T19:59:47.324+0000
+  Wohnzimmer_Dimmer           8 Werte, ältester 2026-11-15T19:59:22.582+0000
+  Werkstatt_Luefter           1 Werte, ältester 2026-11-15T19:58:57.916+0000
+rrd4j: {error=The persistence service does not provide item information.}

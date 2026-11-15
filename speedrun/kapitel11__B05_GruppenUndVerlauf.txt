@@ -1,0 +1,6 @@
+aufnehmen: {message=OK}
+Mitglieder: [Wohnzimmer_Licht, Wohnzimmer_Dimmer, Flur_Licht]
+gLichter: ON (mindestens eines ist an)
+Flur_Licht: ON (vorher OFF), aktualisiert 19:59:35, geändert 19:59:35
+Eltern: gLichter -> gHaus
+entfernen: {message=OK}

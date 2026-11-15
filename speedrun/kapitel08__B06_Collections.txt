@@ -1,0 +1,14 @@
+an: [Wohnzimmer_Licht, Werkstatt_Luefter]
+3 Schalter, Rollladen vorhanden: true
+kein Item im Keller
+  Küche / Kueche_Licht
+  Küche / Kueche_Rollladen
+  Werkstatt / Werkstatt_Luefter
+  Wohnzimmer / Wohnzimmer_Dimmer
+  Wohnzimmer / Wohnzimmer_Licht
+Küche: [Kueche_Licht, Kueche_Rollladen]
+Werkstatt: [Werkstatt_Luefter]
+Wohnzimmer: [Wohnzimmer_Licht, Wohnzimmer_Dimmer]
+{Dimmer=1, Rollershutter=1, Switch=3}
+Dimmer, Rollershutter, Switch
+Licht: ON, Summe der Zahlen: 140

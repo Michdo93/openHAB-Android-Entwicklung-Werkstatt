@@ -1,0 +1,8 @@
+angelegt: astro:moon:buch mit 34 Channels
+Status:   ONLINE
+Ort:      52.5200,13.4050 (Berlin)
+Label:    Mond über Berlin
+aus:      UNINITIALIZED / DISABLED
+an:       ONLINE
+löschen:  REMOVING
+Things:   [astro:sun:zuhause]

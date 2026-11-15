@@ -1,0 +1,8 @@
+openHAB:  http://127.0.0.1:8080
+Token:    gesetzt
+Java 21.0.13 auf Linux, 4 Prozessorkern(e)
+uname:    Linux 7.0.0-1019-azure (Code 0)
+Runde 1
+Runde 2
+Runde 3
+Dienst beendet nach 3 Runden

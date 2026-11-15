@@ -1,0 +1,14 @@
+{message=Rule successfully created., location=rules/buch_lueften}
+  Mon 16.11., 07:30  Werkstatt lüften
+  Mon 16.11., 17:30  Werkstatt lüften
+  Tue 17.11., 07:30  Werkstatt lüften
+  Tue 17.11., 17:30  Werkstatt lüften
+  Wed 18.11., 07:30  Werkstatt lüften
+  Wed 18.11., 17:30  Werkstatt lüften
+  Thu 19.11., 07:30  Werkstatt lüften
+  Thu 19.11., 17:30  Werkstatt lüften
+  Fri 20.11., 07:30  Werkstatt lüften
+  Fri 20.11., 17:30  Werkstatt lüften
+Status: Werkstatt wird gelüftet
+Lüfter: OFF (autoupdate=false: erst das Gerät bestätigt den Command)
+löschen: {message=OK}

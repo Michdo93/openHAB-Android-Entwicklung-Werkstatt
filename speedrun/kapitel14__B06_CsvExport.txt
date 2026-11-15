@@ -1,0 +1,1 @@
+191 Werte (48 h, inmemory) nach Wohnzimmer_Temperatur.csv geschrieben

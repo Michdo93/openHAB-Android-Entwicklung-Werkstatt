@@ -1,0 +1,5 @@
+Puffer: [18.5, 19.0, 19.5], größter: 19.5
+größter Name: Wohnzimmer
+Wohnzimmer_Licht soll ON
+Wohnzimmer_Licht: OFF -> ON
+(lebt)

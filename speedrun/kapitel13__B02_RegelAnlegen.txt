@@ -1,0 +1,4 @@
+anlegen: {message=Rule successfully created., location=rules/buch_kinoabend}
+Status:  IDLE
+Tür offen:  Wohnzimmer_Licht=ON, Wohnzimmer_Dimmer=80, Kueche_Rollladen=0
+Tür zu:     Wohnzimmer_Licht=OFF, Wohnzimmer_Dimmer=20, Kueche_Rollladen=100

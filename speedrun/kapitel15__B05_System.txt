@@ -1,0 +1,27 @@
+  org.openhab.i18n           Regionale Einstellungen
+  org.openhab.units          Einheiteneinstellungen
+  org.openhab.network        Netzwerk
+  org.openhab.audio          Audio
+  org.openhab.ephemeris      Ephemeris
+  org.openhab.restauth       API-Sicherheit
+  org.openhab.addons         Add-On-Management
+  org.openhab.rulehli        Regelbasierter Sprachinterpreter
+  org.openhab.persistence    Persistence
+  org.openhab.storage.json   JSON Storage
+  org.openhab.marketplace    Community-Marktplatz Add-Ons
+  org.openhab.jsonaddonservice JSON Drittanbieter Add-Ons
+  org.openhab.chart          Diagramme
+  org.openhab.sitemap        Sitemap
+  org.openhab.voice          Sprache
+  org.openhab.lsp            Sprachserver (LSP)
+  org.openhab.inbox          Inbox
+Regionale Einstellungen: {location=48.0950,8.6630}
+
+vorher: INFO
+jetzt:  DEBUG
+danach: INFO
+
+Token "werkstatt" (Bereich ) seit 2026-11-15
+offene Sitzungen: 0
+Symbolsätze: Klassische Icons, Astro-Icons
+48 physikalische Größen, z. B. Acceleration [m/s²], AmountOfSubstance [mol], Angle [°]

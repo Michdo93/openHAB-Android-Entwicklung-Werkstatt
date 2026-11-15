@@ -1,0 +1,10 @@
+Wohnzimmer_Licht       <- ON             {message=OK}
+Wohnzimmer_Dimmer      <- 60             {message=OK}
+Wohnzimmer_Farblicht   <- 240,100,80     {message=OK}
+Kueche_Rollladen       <- DOWN           {message=OK}
+Haus_Status            <- Alle zu Hause  {message=OK}
+Wohnzimmer_Licht       = ON
+Wohnzimmer_Dimmer      = 60
+Wohnzimmer_Farblicht   = 240,100,80
+Kueche_Rollladen       = 100
+Haus_Status            = Alle zu Hause

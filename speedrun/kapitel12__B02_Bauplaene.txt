@@ -1,0 +1,20 @@
+astro:sun    Astronomische Sonnendaten
+astro:moon   Astronomische Monddaten
+
+Astronomische Monddaten – Channel-Gruppen:
+  rise       start, end, event
+  set        start, end, event
+  phase      firstQuarter, thirdQuarter, full, new, age, ageDegree, agePercent, illumination, name, event
+  eclipse    total, totalElevation, partial, partialElevation, event
+  distance   date, distance, event
+  perigee    date, distance, event
+  apogee     date, distance, event
+  position   azimuth, elevation, shadeLength
+  zodiac     sign
+
+Konfiguration:
+  geolocation  TEXT     Pflicht          Ort der Monddaten
+  interval     INTEGER  Standard 300     Aktualisierungsintervall
+
+Channel-Typ astro:phaseName: Mondphase, Item-Typ String
+Optionen: Neumond, Zunehmende Sichel, Erstes Viertel, Zunehmender Halbmond, Vollmond, Abnehmender Halbmond, Drittes Viertel, Abnehmende Sichel

@@ -1,0 +1,18 @@
+angenehm
+Haustür: offen
+- Wohnzimmer
+- Küche
+- Werkstatt
+0: Wohnzimmer
+2: Werkstatt
+lang: 0 Wohnzimmer
+lang: 2 Werkstatt
+Versuch 1
+Versuch 3
+hell
+Long über 50: 55
+Text ON
+Kommazahl 21.5
+kleine Zahl 3
+Liste mit 1 Element(en)
+nichts

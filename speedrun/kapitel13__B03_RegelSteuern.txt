@@ -1,0 +1,7 @@
+Dimmwert jetzt: 10
+runNow trotz offener Tür: 10
+abgeschaltet: UNINITIALIZED / DISABLED
+Trigger bei abgeschalteter Regel: 80
+eingeschaltet: IDLE / NONE
+nach updateRule: Film läuft
+löschen: {message=OK}

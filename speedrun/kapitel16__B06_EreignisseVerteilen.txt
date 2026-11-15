@@ -1,0 +1,4 @@
+Deckenlicht      OFF -> ON
+Leselampe        55 -> 45
+Leselampe (2)    55 -> 45
+2 Ereignisse über einen einzigen Strom verteilt

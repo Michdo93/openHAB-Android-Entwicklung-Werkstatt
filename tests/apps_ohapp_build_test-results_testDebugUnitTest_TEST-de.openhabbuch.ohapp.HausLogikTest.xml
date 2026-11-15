@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.openhabbuch.ohapp.HausLogikTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-15T20:01:45" hostname="runnervmccnms" time="0.173">
+  <properties/>
+  <testcase name="fehlerBeimLadenWirdAngezeigt" classname="de.openhabbuch.ohapp.HausLogikTest" time="0.049"/>
+  <testcase name="ohneTokenWirdEingerichtet" classname="de.openhabbuch.ohapp.HausLogikTest" time="0.002"/>
+  <testcase name="ereignisseAusOpenHABAendernDieAnzeige" classname="de.openhabbuch.ohapp.HausLogikTest" time="0.118"/>
+  <testcase name="helligkeitDesFarblichts" classname="de.openhabbuch.ohapp.HausLogikTest" time="0.0"/>
+  <testcase name="erstLadenDannBereit" classname="de.openhabbuch.ohapp.HausLogikTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

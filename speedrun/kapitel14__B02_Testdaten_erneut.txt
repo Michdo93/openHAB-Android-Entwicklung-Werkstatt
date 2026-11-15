@@ -1,0 +1,3 @@
+Wohnzimmer_Temperatur: 192 Werte in »inmemory« geschrieben
+Werkstatt_Temperatur: 192 Werte in »inmemory« geschrieben
+Gegenprobe rrd4j: Persistence service not modifiable: rrd4j

@@ -1,0 +1,5 @@
+anlegen: buch_tablet
+Sitemaps jetzt: buch_tablet, restbuch
+  Licht: Decke (Switch), Leselampe [10 %] (Slider), Alle Lichter [1 an] (Switch)
+  Haus: Haustür [CLOSED] (Text), Modus [Werkstatt wird gelüftet] (Selection)
+UI-Komponenten: buch_tablet

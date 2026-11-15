@@ -1,0 +1,15 @@
+apps/erste-app/build/outputs/apk/debug/:
+erste-app-debug.apk
+output-metadata.json
+
+apps/geraet/build/outputs/apk/debug/:
+geraet-debug.apk
+output-metadata.json
+
+apps/ohapp/build/outputs/apk/debug/:
+ohapp-debug.apk
+output-metadata.json
+
+apps/wear/build/outputs/apk/debug/:
+output-metadata.json
+wear-debug.apk

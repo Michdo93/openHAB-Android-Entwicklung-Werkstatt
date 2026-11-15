@@ -1,0 +1,4 @@
+{message=Created.}
+{message=Created.}
+Flur_Haustuer  melden   wenn=OPEN
+Haus_Status    melden   wenn=(jede Änderung)

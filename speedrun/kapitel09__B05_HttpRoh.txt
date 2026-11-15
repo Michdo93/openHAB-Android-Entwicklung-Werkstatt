@@ -1,0 +1,6 @@
+Status 200, application/json
+von Hand:   Wohnzimmer_Licht = NULL
+Command:    Status 200
+Bibliothek: OFF
+Command:    {message=OK}
+Fehler:     {error=Item not found.}

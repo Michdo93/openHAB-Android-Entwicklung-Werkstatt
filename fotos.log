@@ -1,0 +1,140 @@
+
+=== Gerät vorbereiten ===
+de-DE
+Physical size: 1080x2400
+
+=== Zustände in openHAB setzen ===
+
+
+
+
+
+
+
+=== Apps installieren ===
+Performing Streamed Install
+Success
+Performing Streamed Install
+Success
+Performing Streamed Install
+Success
+
+=== Kapitel 10: erste App ===
+Starting: Intent { cmp=de.openhabbuch.ersteapp/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: de.openhabbuch.ersteapp/.MainActivity
+TotalTime: 1741
+WaitTime: 1757
+Complete
+gefunden: Deckenlicht: ON
+FOTO erste-app: 41624 Bytes
+
+=== Kapitel 17: ohapp einrichten ===
+Starting: Intent { cmp=de.openhabbuch.ohapp/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: de.openhabbuch.ohapp/.MainActivity
+TotalTime: 2224
+WaitTime: 2326
+Complete
+gefunden: API-Token
+Verbindung zu openHAB | http:// | Adresse, z. B. http://192.168.0.10:8080 | API-Token | Speichern | Wächter (Benachrichtigungen)
+getippt: tapedit 0 540 252
+getippt: tapedit 1 540 462
+Verbindung zu openHAB | http://10.0.2.2:8080 | Adresse, z. B. http://192.168.0.10:8080 | ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• | API-Token | Speichern | Wächter (Benachrichtigungen)
+getippt: Speichern 208 714
+gefunden: Deckenlicht
+FOTO ohapp: 84487 Bytes
+
+=== Kapitel 17: Schalten aus der App ===
+getippt: tapcheckable 0 927 704
+Wohnzimmer_Licht nach Tippen: OFF
+getippt: tapcheckable 0 927 704
+Wohnzimmer_Licht nach zweitem Tippen: ON
+
+Wohnzimmer 21.5 °C | Haustür: geschlossen | Deckenlicht | Farblicht | 0 % | Leselampe | 35 % | Zuhause | Vorab-Test | Einstellungen
+
+=== Kapitel 19: Vorab-Test ===
+getippt: Vorab-Test 880 220
+gefunden: Weiter
+FOTO vorabtest: 109239 Bytes
+getippt: Weiter 179 1050
+
+=== Kapitel 20: Wächter und Benachrichtigung ===
+{message=OK}
+{message=OK}
+Flur_Haustuer  melden   wenn=OPEN
+Haus_Status    melden   wenn=(jede Änderung)
+getippt: Einstellungen 1006 220
+gefunden: Wächter
+getippt: tapcheckable 0 948 882
+  * ServiceRecord{2833cb4 u0 de.openhabbuch.ohapp/.waechter.Waechter c:de.openhabbuch.ohapp}
+
+gefunden: ist jetzt OPEN
+FOTO benachrichtigung: 148585 Bytes
+
+
+=== Kapitel 20: Kachel in den Schnelleinstellungen ===
+gefunden: Deckenlicht
+FOTO kachel: 145792 Bytes
+getippt: Deckenlicht 285 640
+Kachel: Licht vorher ON, nachher OFF
+getippt: Deckenlicht 285 640
+Kachel: Licht nach zweitem Tippen ON
+
+=== Kapitel 20: Widget auf dem Startbildschirm ===
+Hintergrund &amp; Stil | Widgets | Einstellungen
+getippt: Widgets 755 903
+Akku | 1 Widget | Android System Intelligence | 1 Verknüpfung | Chrome | 4 Widgets | Digital Wellbeing | 1 Widget | Drive | 2 Widgets, 2 Verknüpfungen | Einstellungen | 1 Verknüpfung | Fotos | 2 Widgets | Gmail | 2 Widgets, 2 Verknüpfungen | Widgets | Suche
+NICHT gefunden: Zuhause
+NICHT gefunden: Zuhause
+getippt: Zuhause 320 2289
+Kontakte | 2 Widgets, 3 Verknüpfungen | Maps | 2 Widgets, 5 Verknüpfungen | Uhr | 5 Widgets | Unterhaltungen | 1 Widget | YouTube | 2 Widgets | YouTube Music | 2 Widgets | Zuhause | 1 Widget | Widget „Deckenlicht“, 2 breit und 1 hoch | Deckenlicht | 2 × 1 | Suche
+getippt: Widget „Deckenlicht“ 540 2090
+Kontakte | 2 Widgets, 3 Verknüpfungen | Maps | 2 Widgets, 5 Verknüpfungen | Uhr | 5 Widgets | Unterhaltungen | 1 Widget | YouTube | 2 Widgets | YouTube Music | 2 Widgets | Zuhause | 1 Widget | Widget „Deckenlicht“, 2 breit und 1 hoch | Hinzufügen | Widget „Deckenlicht“ hinzufügen | Suche
+getippt: Hinzufügen 539 2253
+Live-Anzeige | So., 15. Nov. | So., 15. Nov. | Deckenlicht | Deckenlicht | an | Gmail | Gmail | Fotos | Fotos | YouTube | YouTube | Startbildschirm | Telefon | Telefon | Messages | Messages | Chrome | Chrome | Gmail | Vorgeschlagene App: Gmail | Suche mit Google | Google App | Sprachsuche | Google Lens
+FOTO widget: 1314798 Bytes
+getippt: Deckenlicht 293 615
+Licht nach Widget: OFF
+FOTO widget-nach-tippen: 1309712 Bytes
+
+=== Kapitel 18: das Smartphone als Gerät ===
+Starting: Intent { cmp=de.openhabbuch.geraet/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: de.openhabbuch.geraet/.MainActivity
+TotalTime: 1205
+WaitTime: 1234
+Complete
+gefunden: Starten
+getippt: Starten 186 441
+gefunden: läuft
+
+
+Handy-Items: "state":"gemessen","name":"Handy_Antwort"}, "state":"ON","name":"Handy_Laedt"}, "state":"NULL","name":"gHandy"}, "state":"ON","name":"Handy_Online"}, "state":"100 %","name":"Handy_Akku"}, "state":"-61.0","name":"Handy_WLAN"}, "state":"0 lx","name":"Handy_Helligkeit"}, "state":"MESSEN","name":"Handy_Aktion"}, 
+FOTO geraet: 55793 Bytes
+getippt: Stoppen 194 441
+DELETE Handy_Akku: 401
+DELETE Handy_Aktion: 401
+DELETE Handy_Antwort: 401
+DELETE Handy_Helligkeit: 401
+DELETE Handy_Laedt: 401
+DELETE Handy_Online: 401
+DELETE Handy_WLAN: 401
+DELETE gHandy: 401
+Handy-Items nach dem Aufräumen: Handy_Antwort Handy_Laedt Handy_Online Handy_Akku Handy_WLAN Handy_Helligkeit Handy_Aktion 
+
+=== Logcat (Fehler der Apps) ===
+total 3156
+drwxr-xr-x 2 runner runner    4096 Nov 15 20:07 .
+drwxr-xr-x 6 runner runner    4096 Nov 15 20:07 ..
+-rw-r--r-- 1 runner runner  148585 Nov 15 20:05 benachrichtigung.png
+-rw-r--r-- 1 runner runner   41624 Nov 15 20:04 erste-app.png
+-rw-r--r-- 1 runner runner   55793 Nov 15 20:07 geraet.png
+-rw-r--r-- 1 runner runner  145792 Nov 15 20:05 kachel.png
+-rw-r--r-- 1 runner runner   84487 Nov 15 20:04 ohapp.png
+-rw-r--r-- 1 runner runner  109239 Nov 15 20:05 vorabtest.png
+-rw-r--r-- 1 runner runner 1309712 Nov 15 20:06 widget-nach-tippen.png
+-rw-r--r-- 1 runner runner 1314798 Nov 15 20:06 widget.png

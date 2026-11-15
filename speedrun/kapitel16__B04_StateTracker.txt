@@ -1,0 +1,9 @@
+Verbindung: eaaebadd-1d11-4a54-9348-89afac49373c
+  Wohnzimmer_Dimmer      state=71           anzeige=71 %
+  Wohnzimmer_Temperatur  state=21.5 °C      anzeige=21.5 °C
+  Wohnzimmer_Dimmer      state=55           anzeige=55 %
+--- Ansicht gewechselt: neue Item-Liste
+  Werkstatt_Feuchte      state=72 %         anzeige=72 %
+  Werkstatt_Temperatur   state=19.3 °C      anzeige=19.3 °C
+  Werkstatt_Temperatur   state=19.8 °C      anzeige=19.8 °C
+zuletzt angezeigt: [55 %, 21.5 °C, 72 %, 19.8 °C]

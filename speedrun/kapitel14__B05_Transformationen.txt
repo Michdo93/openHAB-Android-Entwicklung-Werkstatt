@@ -1,0 +1,9 @@
+installieren: {message=OK}
+Transformationsdienste: [DSL, MAP]
+anlegen: {message=OK}
+  config:map:tuer  map  änderbar
+  en.map           map  aus Datei
+  de.map           map  aus Datei
+Zustand OPEN   -> Anzeige offen
+Zustand CLOSED -> Anzeige geschlossen
+löschen: {message=OK}

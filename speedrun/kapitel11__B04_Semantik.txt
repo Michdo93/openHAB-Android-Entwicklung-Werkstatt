@@ -1,0 +1,20 @@
+271 Tags, davon 36 Orte, z. B.: Innen, Wohnung, Gebäude, Garage, Haus, Schuppen
+  Wohnzimmer_Dimmer        Point_Control              Property_Light         gWohnzimmer
+  Flur_Haustuer            Point_Status               Property_Opening       gHaus
+  Wohnzimmer_Temperatur    Point_Measurement          Property_Temperature   gWohnzimmer
+  gHaus                    Location                                          
+  Kueche_Rollladen         Point_Control              Property_Opening       gKueche
+  gKueche                  Location_Indoor_Room_Kitchen                        
+  gWohnzimmer              Location_Indoor_Room_LivingRoom                        
+  Wohnzimmer_Licht         Point_Control_Switch       Property_Light         gWohnzimmer
+  Wohnzimmer_Farblicht     Point_Control              Property_Light         gWohnzimmer
+  Werkstatt_Luefter        Point_Control_Switch                              gWerkstatt
+  gWerkstatt               Location_Indoor_Room                              
+  Werkstatt_Feuchte        Point_Measurement          Property_Humidity      gWerkstatt
+  Werkstatt_Temperatur     Point_Measurement          Property_Temperature   gWerkstatt
+
+Wohnzimmer_Temperatur liegt in: gWohnzimmer (Wohnzimmer)
+
+Tag angelegt: Location_Outdoor_Garden_Gartenhaus (editierbar: true)
+Semantik: Point_Measurement {relatesTo=Property_Temperature, hasLocation=gGartenhaus}
+Tag löschen: {message=OK, was deleted.}

@@ -1,0 +1,7 @@
+berichte/messwerte.csv: 111 Bytes
+zeit;item;wert
+Summe 57.0
+url = http://127.0.0.1:8080, items = [Wohnzimmer_Licht]
+  einstellungen.json
+  messwerte.csv
+existiert: false

@@ -1,0 +1,8 @@
+restbuch-1   Gute Nacht     IDLE   Tags []
+restbuch-2   Startwerte     IDLE   Tags []
+
+Regel restbuch-1:
+  Trigger    0       core.ItemCommandTrigger    {"itemName":"Haus_Status","command":…
+  Aktion     script  script.ScriptAction        {"type":"application/vnd.openhab.dsl…
+
+Skript der Aktion: // context: restbuch-1 | gLichter.sendCommand(OFF) | Haus_Status.p

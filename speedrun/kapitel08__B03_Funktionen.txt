@@ -1,0 +1,9 @@
+21.5 °C = 70.7 °F
+Wohnzimmer_Licht <- ON
+Wohnzimmer_Dimmer <- 40
+Wohnzimmer_Dimmer <- ON (von app)
+Mittelwert: 19.5
+[Wohnzimmer_Licht, Wohnzimmer_Dimmer]
+Räume: [Wohnzimmer, Kueche]
+Länge: 13
+Fertig.

@@ -1,0 +1,9 @@
+openHAB 5.2.3 unter http://127.0.0.1:8080
+  Sprache/Land:   en, Maßsystem SI
+  Endpunkte:      30
+  Betriebssystem: Linux 7.0.0-1019-azure (amd64)
+  Java (openHAB): 21.0.13 von Eclipse Adoptium
+  Konfiguration:  /home/runner/openhab/conf
+  Speicher:       86 von 322 MiB frei
+  Instanz-UUID:   efa54af8-ffed-4e30-8b8e-548b6e1adf23
+  Java (hier):    21.0.13 unter Linux

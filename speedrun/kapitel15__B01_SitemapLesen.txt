@@ -1,0 +1,19 @@
+Sitemap restbuch: REST-Buch
+
+Startseite »REST-Buch«:
+  Frame        Wohnzimmer
+    Switch       Deckenlicht                  = OFF
+    Slider       Leselampe [10 %]             = 10
+    Colorpicker  Farblicht                    = 240,100,80
+    Text         Temperatur [21.5 °C]         = 21.5 °C
+  Frame        Küche und Flur
+    Switch       Rollladen [100 %]            = 100
+    Text         Haustür [CLOSED]             = CLOSED
+  Frame        Werkstatt (DIY-Gerät)
+    Text         Werkstatt [18.4 °C]          = 18.4 °C
+    Text         Feuchte [72 %]               = 72 %
+    Switch       Lüfter                       = OFF
+    Text         Letzte Meldung [19:59:23]    = 2026-11-15T19:59:23.237526840+0000
+  Frame        Haus
+    Switch       Alle Lichter [1 an]          = ON
+    Text         Status [Werkstatt wird gelüftet] = Werkstatt wird gelüftet

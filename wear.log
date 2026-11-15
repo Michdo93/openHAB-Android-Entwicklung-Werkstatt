@@ -1,0 +1,26 @@
+Physical size: 454x454
+Performing Streamed Install
+Success
+Starting…
+Starting: Intent { cmp=de.openhabbuch.wear/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: de.openhabbuch.wear/.MainActivity
+TotalTime: 922
+WaitTime: 937
+Complete
+NICHT gefunden: Deckenlicht
+100% | 08&#10;09 | 8:09 PM | Sun 15 | Sunday 15
+Starting: Intent { cmp=de.openhabbuch.wear/.MainActivity }
+Warning: Activity not started, its current task has been brought to the front
+Status: ok
+LaunchState: HOT
+Activity: de.openhabbuch.wear/.MainActivity
+TotalTime: 57
+WaitTime: 58
+Complete
+gefunden: Deckenlicht
+ruhiges Bild nach 1 Aufnahmen
+Lichter | Leselampe | Deckenlicht
+getippt: Leselampe 125 227
+Leselampe nach Tippen: 0

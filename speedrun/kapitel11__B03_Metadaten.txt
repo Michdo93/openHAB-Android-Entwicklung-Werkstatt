@@ -1,0 +1,30 @@
+stateDescription: {message=Created.}
+expire:           {message=Created.}
+eigener:          {message=Created.}
+Namensräume:      [restbuch, expire, stateDescription]
+{
+  "restbuch": {
+    "value": "klingel",
+    "config": {
+      "raum": "Flur",
+      "prioritaet": 2.0
+    },
+    "editable": true
+  },
+  "expire": {
+    "value": "10s,state=RUHE",
+    "editable": true
+  },
+  "stateDescription": {
+    "value": " ",
+    "config": {
+      "pattern": "%s",
+      "options": "RUHE=Ruhe,KLINGELT=Es klingelt!,GEOEFFNET=Tür geöffnet",
+      "readOnly": false
+    },
+    "editable": true
+  }
+}
+Zustand: KLINGELT | Anzeige: Es klingelt!
+nach 11 s: RUHE
+entfernen: {message=OK}

@@ -1,0 +1,4 @@
+vorher:  193
+{message=OK}
+nachher: 169
+rrd4j: Persistence service not modifiable: rrd4j

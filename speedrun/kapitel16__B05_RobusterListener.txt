@@ -1,0 +1,5 @@
+20:00:33 verbunden
+20:00:36 TEST: Verbindung gekappt
+20:00:36 Verbindung beendet
+20:00:37 verbunden
+20:00:43 Listener beendet

@@ -1,0 +1,11 @@
+492 Add-ons verfügbar, 4 installiert:
+  binding-astro            5.2.3    Astro Binding
+  persistence-inmemory     5.2.3    InMemory Persistence
+  persistence-rrd4j        5.2.3    RRD4J Persistence
+  ui-basic                 5.2.3    Basic UI
+
+Verfügbar nach Art: {automation=8, binding=429, misc=7, persistence=16, transformation=14, ui=4, voice=14}
+
+Astro Binding: The Astro binding calculates astronomical data from sun and moon.…
+Logger-Pakete: [org.openhab.binding.astro]
+Installationsquellen: [jar, karaf, marketplace, json]

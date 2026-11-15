@@ -1,0 +1,11 @@
+anlegen: gGartenhaus              created
+anlegen: Gartenhaus_Licht         created
+anlegen: Gartenhaus_Temperatur    created
+anlegen: Gartenhaus_Tuer          created
+anlegen: gGartenhaus_Lichter      created
+  Gartenhaus_Licht         Switch               ON
+  Gartenhaus_Temperatur    Number:Temperature   12.5 °C
+  Gartenhaus_Tuer          Contact              CLOSED
+  gGartenhaus_Lichter      Group                ON
+Lichter im Gartenhaus: ON
+aufgeräumt: true
