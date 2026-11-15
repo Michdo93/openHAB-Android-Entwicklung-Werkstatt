@@ -17,17 +17,16 @@ adb shell settings put global stay_on_while_plugged_in 7
 adb shell input keyevent KEYCODE_WAKEUP
 adb shell wm dismiss-keyguard
 $UI dump wear-vor-start
-for versuch in 1 2 3; do
+for versuch in 1 2 3 4; do
   adb shell input keyevent KEYCODE_WAKEUP
   adb shell am start -W -n de.openhabbuch.wear/.MainActivity
-  sleep 5
-  adb shell dumpsys activity activities | grep -i "topResumedActivity\|mResumedActivity" | head -2
-  $UI wait "Deckenlicht" 30 && break
+  if $UI wait "Deckenlicht" 30; then
+    adb exec-out screencap -p > "$OUT/wear.png"
+    $UI dump wear
+    grep -q "Deckenlicht" ergebnisse/ui/wear.xml && break
+  fi
   $UI dump wear-versuch-$versuch
 done
-sleep 3
-adb exec-out screencap -p > "$OUT/wear.png"
-$UI dump wear
 $UI tap "Leselampe" && sleep 3
 echo "Leselampe nach Tippen: $(curl -s -H "$H" "$OPENHAB_URL/rest/items/Wohnzimmer_Dimmer/state")"
 adb exec-out screencap -p > "$OUT/wear-nach-tippen.png"

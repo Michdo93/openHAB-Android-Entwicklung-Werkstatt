@@ -179,7 +179,7 @@ sleep 3
 adb shell am force-stop de.openhabbuch.geraet
 sleep 3
 for i in Handy_Akku Handy_Aktion Handy_Antwort Handy_Helligkeit Handy_Laedt Handy_Online Handy_WLAN gHandy; do
-  rest DELETE /items/$i > /dev/null
+  curl -s -o /dev/null -w "DELETE $i: %{http_code}\n" -X DELETE -H "$H" "$OPENHAB_URL/rest/items/$i"
 done
 echo "Handy-Items nach dem Aufräumen: $(curl -s -H "$H" "$OPENHAB_URL/rest/items?fields=name" | grep -o 'Handy_[A-Za-z]*' | tr '\n' ' ')"
 
