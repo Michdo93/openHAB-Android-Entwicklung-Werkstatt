@@ -25,24 +25,13 @@ for i in $(seq 1 120); do
   sleep 5
 done
 echo "REST: $code"
-# erster Administrator über die Anmeldeseite, dann ein API-Token über /createApiToken
-PW=werkstatt-$RANDOM$RANDOM
-R="http://localhost/werkstatt"
-curl -s -o /dev/null -w "Benutzer anlegen: %{http_code}\n" -X POST http://127.0.0.1:8080/auth \
-  --data-urlencode "username=admin" --data-urlencode "password=$PW" \
-  --data-urlencode "passwordRepeat=$PW" --data-urlencode "response_type=code" \
-  --data-urlencode "client_id=$R" --data-urlencode "redirect_uri=$R" \
-  --data-urlencode "scope=admin" --data-urlencode "state=1"
-SEITE=$(curl -s -X POST http://127.0.0.1:8080/createApiToken \
-  --data-urlencode "username=admin" --data-urlencode "password=$PW" \
-  --data-urlencode "token_name=werkstatt" --data-urlencode "token_scope=")
-TOKEN=$(echo "$SEITE" | grep -o 'oh\.werkstatt\.[A-Za-z0-9]*' | head -1 || true)
-if [ -z "$TOKEN" ]; then
-  echo "$SEITE" | sed 's/<[^>]*>/ /g' | tr -s ' ' | head -c 600; echo
-  konsole() { "$ZIEL/runtime/bin/client" -h 127.0.0.1 -a 8101 -u openhab -p habopen "$@"; }
-  konsole "openhab:users add admin $PW administrator" || true
-  TOKEN=$(konsole "openhab:users addApiToken admin werkstatt2 admin" | grep -o 'oh\.[A-Za-z0-9]*\.[A-Za-z0-9]*' | head -1 || true)
-fi
+# erster Administrator und API-Token über die Formulare /auth und /createApiToken
+sleep 20
+for i in 1 2 3 4 5; do
+  TOKEN=$(python3 werkstatt/openhab-token.py http://127.0.0.1:8080 admin "werkstatt-$RANDOM$RANDOM" werkstatt || true)
+  [ -n "$TOKEN" ] && break
+  sleep 15
+done
 [ -n "$TOKEN" ] || { echo "kein Token"; exit 1; }
 echo "::add-mask::$TOKEN"
 { echo "OPENHAB_URL=http://127.0.0.1:8080"; echo "OPENHAB_TOKEN=$TOKEN"; } >> "${GITHUB_ENV:-/dev/null}"
