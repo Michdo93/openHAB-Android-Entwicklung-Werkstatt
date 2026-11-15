@@ -24,7 +24,9 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import de.openhabbuch.ohapp.OhApp
 import de.openhabbuch.ohapp.daten.OpenHABSmartHome
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.withTimeoutOrNull
 
 const val WIDGET_ITEM = "Wohnzimmer_Licht"
 
@@ -61,6 +63,10 @@ class Umschalten : ActionCallback {
         val home = home(context) ?: return
         val neu = if (home.zustand(WIDGET_ITEM).getOrNull() == "ON") "OFF" else "ON"
         home.befehl(WIDGET_ITEM, neu)
+        // kurz warten, bis openHAB den neuen Zustand übernommen hat
+        withTimeoutOrNull(2000) {
+            while (home.zustand(WIDGET_ITEM).getOrNull() != neu) delay(200)
+        }
         LichtWidget().update(context, glanceId)
     }
 }

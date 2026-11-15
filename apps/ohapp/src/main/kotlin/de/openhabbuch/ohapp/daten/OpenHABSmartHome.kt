@@ -9,6 +9,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
+private val LAMPEN = setOf("Switch", "Dimmer", "Color")
+
 class OpenHABSmartHome(verbindung: Verbindung) : SmartHome {
     private val openHAB = OpenHAB(verbindung.url, token = verbindung.token)
 
@@ -16,7 +18,8 @@ class OpenHABSmartHome(verbindung: Verbindung) : SmartHome {
         val antwort = openHAB.items.getItems(tags = "Light",
             fields = "name,label,type,state")
         if (Json.isError(antwort)) return Result.failure(Exception(Json.error(antwort)))
-        val lichter = Json.list(antwort).map {
+        // "Light" tragen auch Messwerte wie die Helligkeit – Lampen sind schaltbar
+        val lichter = Json.list(antwort).filter { it["type"] in LAMPEN }.map {
             val name = it["name"].toString()
             Licht(name, (it["label"] ?: name).toString(), it["type"].toString(),
                 it["state"].toString())

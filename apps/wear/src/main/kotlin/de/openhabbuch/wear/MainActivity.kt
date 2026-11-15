@@ -41,10 +41,12 @@ fun Lichter(openHAB: OpenHAB) {
     val scope = rememberCoroutineScope()
 
     LaunchedEffect(Unit) {
-        val liste = openHAB.items.getItems(tags = "Light", fields = "name,label,state")
-        lichter = Json.list(liste).associate {
-            it["name"].toString() to (it["label"].toString() to it["state"].toString())
-        }
+        val liste = openHAB.items.getItems(tags = "Light", fields = "name,label,type,state")
+        // nur schaltbare Lampen, keine Messwerte wie die Helligkeit
+        lichter = Json.list(liste).filter { it["type"] in setOf("Switch", "Dimmer") }
+            .associate {
+                it["name"].toString() to (it["label"].toString() to it["state"].toString())
+            }
         // live: jede Änderung aus openHAB übernehmen (endet, wenn die App schließt)
         openHAB.itemEvents.ItemStateChangedEvent().events().collect { e ->
             val name = e["topic"].toString().split("/")[2]

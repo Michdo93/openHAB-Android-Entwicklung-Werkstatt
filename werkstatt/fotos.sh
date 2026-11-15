@@ -104,8 +104,12 @@ sleep 5
 adb shell dumpsys activity services de.openhabbuch.ohapp | grep -i "ServiceRecord" | head -3
 rest PUT /items/Flur_Haustuer/state OPEN
 sleep 6
-adb shell cmd statusbar expand-notifications
-sleep 3
+for versuch in 1 2 3; do
+  adb shell cmd statusbar expand-notifications
+  sleep 3
+  $UI wait "ist jetzt OPEN" 5 && break
+  adb shell cmd statusbar collapse; sleep 2
+done
 foto benachrichtigung
 adb shell cmd statusbar collapse
 rest PUT /items/Flur_Haustuer/state CLOSED
@@ -115,7 +119,13 @@ adb shell cmd statusbar add-tile de.openhabbuch.ohapp/.kachel.LichtKachel
 sleep 2
 adb shell cmd statusbar expand-settings
 sleep 3
+$UI wait "Deckenlicht" 5 || { adb shell cmd statusbar expand-settings; sleep 3; }
 foto kachel
+vorher=$(rest GET /items/Wohnzimmer_Licht/state)
+$UI tap "Deckenlicht" && sleep 3
+echo "Kachel: Licht vorher $vorher, nachher $(rest GET /items/Wohnzimmer_Licht/state)"
+$UI tap "Deckenlicht" && sleep 3
+echo "Kachel: Licht nach zweitem Tippen $(rest GET /items/Wohnzimmer_Licht/state)"
 adb shell cmd statusbar collapse
 
 schritt "Kapitel 20: Widget auf dem Startbildschirm"
@@ -162,14 +172,16 @@ rest POST /items/Handy_Aktion VIBRIEREN
 sleep 3
 rest POST /items/Handy_Aktion MESSEN
 sleep 3
-echo "Handy-Items: $(curl -s -H "$H" "$OPENHAB_URL/rest/items?tags=&fields=name,state" | tr '{' '\n' | grep Handy)"
+echo "Handy-Items: $(curl -s -H "$H" "$OPENHAB_URL/rest/items?fields=name,state" | tr '{' '\n' | grep Handy | tr '\n' ' ')"
 foto geraet
 $UI tap "Stoppen"
 sleep 3
 adb shell am force-stop de.openhabbuch.geraet
+sleep 3
 for i in Handy_Akku Handy_Aktion Handy_Antwort Handy_Helligkeit Handy_Laedt Handy_Online Handy_WLAN gHandy; do
   rest DELETE /items/$i > /dev/null
 done
+echo "Handy-Items nach dem Aufräumen: $(curl -s -H "$H" "$OPENHAB_URL/rest/items?fields=name" | grep -o 'Handy_[A-Za-z]*' | tr '\n' ' ')"
 
 schritt "Logcat (Fehler der Apps)"
 adb logcat -d -v brief '*:E' | grep -i "openhabbuch\|AndroidRuntime" | head -80 > ergebnisse/logcat-fehler.txt
